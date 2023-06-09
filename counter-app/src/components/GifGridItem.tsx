@@ -1,5 +1,4 @@
 import Gif from "../models/Gif";
-
 interface GifGridItemProps {
     img: Gif;
 }

@@ -1,10 +1,10 @@
 import { ChangeEvent, useState } from "react";
 
 interface AddCategoryProps {
-    setCategories: React.Dispatch<React.SetStateAction<string[]>>;
+    addCategory: (newItem: string) => void;
 }
 
-const AddCategory: React.FC<AddCategoryProps> = ({ setCategories }) => {
+const AddCategory: React.FC<AddCategoryProps> = ({ addCategory}) => {
 
     const [inputValue, setInputValue] = useState<string>('');
 
@@ -15,7 +15,7 @@ const AddCategory: React.FC<AddCategoryProps> = ({ setCategories }) => {
     const handleSubmit = (event:ChangeEvent<HTMLFormElement>) => {
         event.preventDefault();
         if(inputValue.trim().length > 2){
-            setCategories( categories => [ inputValue, ...categories] );
+            addCategory(inputValue);
             setInputValue('');
         }
     };
