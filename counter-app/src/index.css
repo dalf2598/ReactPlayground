@@ -66,3 +66,33 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } 
+
+input{
+  width: 100%;
+  min-height: 2rem;
+  font-size: medium;
+}
+
+.card {
+  align-content: center;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  margin-bottom: 1.5em;
+  margin-right: 1.5em;
+  overflow: hidden;
+}
+
+.card-grip{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.card p {
+  padding: 5px;
+  text-align: center;
+}
+
+.card img{
+  max-height: 170px;
+}

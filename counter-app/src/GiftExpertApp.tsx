@@ -10,7 +10,7 @@ const GiftExpertApp: React.FC = () => {
  
     return (
       <>
-        <h2>GiftExpertApp</h2>
+        <h2>Fetching Gifts</h2>
         <AddCategory setCategories={setCategories} />
         <hr />
         <ol>

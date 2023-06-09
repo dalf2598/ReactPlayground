@@ -15,7 +15,7 @@ const AddCategory: React.FC<AddCategoryProps> = ({ setCategories }) => {
     const handleSubmit = (event:ChangeEvent<HTMLFormElement>) => {
         event.preventDefault();
         if(inputValue.trim().length > 2){
-            setCategories( categories => [...categories, inputValue] );
+            setCategories( categories => [ inputValue, ...categories] );
             setInputValue('');
         }
     };
