@@ -1,10 +1,10 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useState } from 'react';
 
 interface AddCategoryProps {
     addCategory: (newItem: string) => void;
 }
 
-const AddCategory: React.FC<AddCategoryProps> = ({ addCategory}) => {
+const AddCategory: React.FC<AddCategoryProps> = ({ addCategory }) => {
 
     const [inputValue, setInputValue] = useState<string>('');
 
@@ -21,9 +21,9 @@ const AddCategory: React.FC<AddCategoryProps> = ({ addCategory}) => {
     };
 
     return (  
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}  role='form'>
             <input
-                type="text"
+                type='text'
                 value={inputValue}
                 onChange={handleInputChange}
             />

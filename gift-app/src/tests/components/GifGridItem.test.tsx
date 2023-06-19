@@ -1,23 +1,20 @@
 import { render, screen } from '@testing-library/react';
 import GifGridItem from '../../components/GifGridItem';
+import gifs from '../mocks/gifts.json';
 
-const mockImage = {
-  id: "VXJWhaO7afRe",
-  title: "One Punch Man GIF",
-  url: "https://media2.giphy.com/media/VXJWhaO7afRe/20…da603vilb&ep=v1_gifs_search&rid=200_d.gif&ct=g",
-};
+const mockGift = gifs[0];
 
 const setup = () => {
   render(
-    <GifGridItem key={mockImage.id} img={mockImage} />
+    <GifGridItem key={mockGift.id} img={mockGift} />
   );
 }
-  
-test("Should render component", () => {
+
+test("Verify component is rendered", () => {
   setup();
 });
 
-test("Should assign title", async () => {
+test("Verify GIF title is displayed", async () => {
   setup();
-  expect(await screen.findByText('One Punch Man GIF')).toBeInTheDocument();
+  expect(await screen.findByText("One Punch Man GIF")).toBeInTheDocument();
 });

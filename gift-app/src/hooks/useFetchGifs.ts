@@ -1,23 +1,19 @@
 import { useEffect, useState } from "react";
 import getGifs from "../utils/GetGifs";
-import Gif from "../models/Gif";
+import GifRequest from "../models/GifRequest";
 
-interface request{
-    data: Gif[];
-    loading: boolean;
-}
 
-const useFetchGifts = (category : string) : request  => {
-    const [state, setState] = useState<request>({
+const useFetchGifts = (category : string) : GifRequest  => {
+    const [state, setState] = useState<GifRequest>({
         data: [],
         loading: true
     })
     
     useEffect(() => {
         getGifs(category).then(
-            imgs => {
+            gifts => {
                 setState({
-                    data: imgs,
+                    data: gifts,
                     loading: false
                 });
             }
