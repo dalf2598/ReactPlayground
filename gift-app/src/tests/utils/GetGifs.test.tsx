@@ -5,7 +5,7 @@ jest.mock("../../utils/GetGifs", () =>
   jest.fn().mockImplementation(() => gifts)
 );
 
-test("Verify api callss", async () => {
+test("Verify api call", async () => {
   const fetchedGifts = await getGifs('One Punch');
   expect(fetchedGifts).toHaveLength(3);
 });

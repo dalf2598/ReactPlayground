@@ -1,6 +1,6 @@
 import Gif from "../models/Gif";
 import GifGridItem from "./GifGridItem";
-import useFetchGifts from "../hooks/useFetchGifs";
+import useFetchGifs from "../hooks/useFetchGifs";
 
 interface GifGridProps {
     category: string;
@@ -8,7 +8,7 @@ interface GifGridProps {
 
 const GifGrid: React.FC<GifGridProps> = ({ category }) => {
 
-    const { data:images, loading } = useFetchGifts(category);
+    const { data:images, loading } = useFetchGifs(category);
 
     return (
       <>

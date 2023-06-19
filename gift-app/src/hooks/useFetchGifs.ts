@@ -3,7 +3,7 @@ import getGifs from "../utils/GetGifs";
 import GifRequest from "../models/GifRequest";
 
 
-const useFetchGifts = (category : string) : GifRequest  => {
+const useFetchGifs = (category : string) : GifRequest  => {
     const [state, setState] = useState<GifRequest>({
         data: [],
         loading: true
@@ -23,4 +23,4 @@ const useFetchGifts = (category : string) : GifRequest  => {
     return state;
 }
 
-export default useFetchGifts;
+export default useFetchGifs;
